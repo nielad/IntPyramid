@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Pyramid{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+       int rows = input.nextInt(); // 
+       
+        int k = 2 * rows - 1; //number of spaces preceding the left triangle is a multiple of rows - 1.
+        for (int x = 1; x <= rows; x++){//outerloop specifies the number of lines
+                for (int a = 0; a <= k; a++)//prints the number of spaces equal to k + 1
+                    System.out.print(" ");
+                
+                k = k - 2; //reduces the amount of preceding spaces by 2
+                
+                for (int leftDigit = 1; leftDigit <= x; leftDigit++)//prints left triangle, including 1
+                    System.out.print(x - leftDigit + 1 + " ");
+                     
+                for (int rightDigit= 1; rightDigit < x; rightDigit++)//prints right triangle, excluding 1
+                    System.out.print(rightDigit + 1 + " ");              
+                               
+            System.out.println("");
+        }                
+    }     
+}          
+          
+            
+            
+        
+            
