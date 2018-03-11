@@ -1,9 +1,11 @@
+//Prints a pyramid with a number of rows set by the user. Formatted up to 9.
+
 import java.util.Scanner;
 
 public class Pyramid{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-       int rows = input.nextInt(); // 
+       int rows = input.nextInt(); 
        
         //number of spaces preceding the left triangle is a multiple of rows - 1.
         int k = 2 * rows - 1; 
