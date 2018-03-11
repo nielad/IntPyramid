@@ -5,17 +5,25 @@ public class Pyramid{
         Scanner input = new Scanner(System.in);
        int rows = input.nextInt(); // 
        
-        int k = 2 * rows - 1; //number of spaces preceding the left triangle is a multiple of rows - 1.
-        for (int x = 1; x <= rows; x++){//outerloop specifies the number of lines
-                for (int a = 0; a <= k; a++)//prints the number of spaces equal to k + 1
+        //number of spaces preceding the left triangle is a multiple of rows - 1.
+        int k = 2 * rows - 1; 
+        
+        //outerloop specifies the number of lines
+        for (int x = 1; x <= rows; x++){
+        
+                //prints the number of spaces equal to k + 1
+                for (int a = 0; a <= k; a++)
                     System.out.print(" ");
+                    
+                //reduces the amount of preceding spaces by 2
+                k = k - 2; 
                 
-                k = k - 2; //reduces the amount of preceding spaces by 2
-                
-                for (int leftDigit = 1; leftDigit <= x; leftDigit++)//prints left triangle, including 1
+                //prints left triangle, including 1
+                for (int leftDigit = 1; leftDigit <= x; leftDigit++)
                     System.out.print(x - leftDigit + 1 + " ");
-                     
-                for (int rightDigit= 1; rightDigit < x; rightDigit++)//prints right triangle, excluding 1
+                
+                //prints right triangle, excluding 1
+                for (int rightDigit= 1; rightDigit < x; rightDigit++)
                     System.out.print(rightDigit + 1 + " ");              
                                
             System.out.println("");
